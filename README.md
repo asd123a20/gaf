@@ -1,6 +1,6 @@
 # service-naf
 
-
+集成，用户、角色、菜单、功能、字典、权限绑定
 
 ## QuickStart
 
