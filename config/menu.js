@@ -1,0 +1,313 @@
+/* eslint-disable strict */
+const data = [
+  {
+    module: 'frame',
+    path: '/frame/home',
+    title: '首页',
+    code: 'frameHome',
+    parentCode: null,
+    icon: 'el-icon-star-on',
+  },
+  {
+    module: 'gaf',
+    path: '',
+    title: '系统管理',
+    code: 'gaf',
+    parentCode: null,
+    icon: 'el-icon-star-on',
+  },
+  {
+    module: 'code',
+    path: '/code/home',
+    title: '字典管理',
+    code: 'code',
+    parentCode: 'gaf',
+    icon: 'el-icon-star-on',
+  },
+  {
+    module: 'adminUser',
+    path: '/adminUser/home',
+    title: '系统用户',
+    code: 'adminUser',
+    parentCode: 'gaf',
+    icon: 'el-icon-star-on',
+  },
+  {
+    module: 'role',
+    path: '/role/home',
+    title: '系统角色',
+    code: 'role',
+    parentCode: 'gaf',
+    icon: 'el-icon-star-on',
+  },
+  {
+    module: 'roleMenu',
+    path: '/roleMenu/home',
+    title: '系统菜单',
+    code: 'roleMenu',
+    parentCode: 'gaf',
+    icon: 'el-icon-star-on',
+  },
+  {
+    module: 'log',
+    path: '/log/home',
+    title: '系统日志',
+    code: 'log',
+    parentCode: 'gaf',
+    icon: 'el-icon-star-on',
+  },
+  // 内容管理
+  {
+    module: 'content',
+    path: '',
+    title: '内容管理',
+    code: 'contentHome',
+    parentCode: null,
+    icon: 'el-icon-star-on',
+  },
+  {
+    module: 'menus',
+    path: '/menus/home',
+    title: '菜单管理',
+    code: 'menus',
+    parentCode: 'contentHome',
+    icon: 'el-icon-star-on',
+  },
+  {
+    module: 'column',
+    path: '/column/home',
+    title: '栏目管理',
+    code: 'column',
+    parentCode: 'contentHome',
+    icon: 'el-icon-star-on',
+  },
+  {
+    module: 'imgNews',
+    path: '/imgNews/home',
+    title: '图片新闻管理',
+    code: 'imgNews',
+    parentCode: 'contentHome',
+    icon: 'el-icon-star-on',
+  },
+  {
+    module: 'pages',
+    path: '/pages/home',
+    title: '单页管理',
+    code: 'pages',
+    parentCode: 'contentHome',
+    icon: 'el-icon-star-on',
+  },
+  {
+    module: 'contents',
+    path: '/contents/home',
+    title: '文章管理',
+    code: 'contents',
+    parentCode: 'contentHome',
+    icon: 'el-icon-star-on',
+  },
+  {
+    module: 'toConfig',
+    path: '/toConfig/home',
+    title: '网站配置',
+    code: 'toConfig',
+    parentCode: 'contentHome',
+    icon: 'el-icon-star-on',
+  },
+  // 期刊管理
+  {
+    module: 'journal',
+    path: '',
+    title: '期刊管理',
+    code: 'journalHome',
+    parentCode: null,
+    icon: 'el-icon-star-on',
+  },
+  {
+    module: 'intact',
+    path: '/intact/home',
+    title: '期刊栏目',
+    code: 'intact',
+    parentCode: 'journalHome',
+    icon: 'el-icon-star-on',
+  },
+  {
+    module: 'catalogue',
+    path: '/catalogue/home',
+    title: '期刊目录',
+    code: 'catalogue',
+    parentCode: 'journalHome',
+    icon: 'el-icon-star-on',
+  },
+  // 商城商品
+  {
+    module: 'marketgoods',
+    path: '',
+    title: '商城商品',
+    code: 'marketgoods',
+    parentCode: null,
+    icon: 'el-icon-star-on',
+  },
+  // 商品管理
+  {
+    module: 'goods',
+    path: '/goods/home',
+    title: '货品管理',
+    code: 'goodsHome',
+    parentCode: 'marketgoods',
+    icon: 'el-icon-star-on',
+  },
+  // 商城管理
+  {
+    module: 'market',
+    path: '/market/home',
+    title: '商品管理',
+    code: 'marketHome',
+    parentCode: 'marketgoods',
+    icon: 'el-icon-star-on',
+  },
+  // 用户会员
+  {
+    module: 'uservip',
+    path: '',
+    title: '用户会员',
+    code: 'uservip',
+    parentCode: null,
+    icon: 'el-icon-star-on',
+  },
+  // 客户端用户管理
+  {
+    module: 'clientUser',
+    path: '/clientUser/home',
+    title: '用户管理',
+    code: 'clientUserHome',
+    parentCode: 'uservip',
+    icon: 'el-icon-star-on',
+  },
+  // vip
+  {
+    module: 'clientVip',
+    path: '/clientVip/home',
+    title: '会员管理',
+    code: 'clientVipHome',
+    parentCode: 'uservip',
+    icon: 'el-icon-star-on',
+  },
+  // 机构管理
+  {
+    module: 'org',
+    path: '/org/home',
+    title: '机构管理',
+    code: 'orgHome',
+    parentCode: 'uservip',
+    icon: 'el-icon-star-on',
+  },
+  // 活动管理
+  {
+    module: 'activity',
+    path: '/activity/home',
+    title: '活动管理',
+    code: 'activityHome',
+    parentCode: null,
+    icon: 'el-icon-star-on',
+  },
+  // 投稿
+  {
+    module: 'contribution',
+    path: '/contribution/home',
+    title: '投稿管理',
+    code: 'contributionHome',
+    parentCode: null,
+    icon: 'el-icon-star-on',
+  },
+  // 题库管理
+  {
+    module: 'problem',
+    path: '',
+    title: '题库管理',
+    code: 'paperBank',
+    parentCode: null,
+    icon: 'el-icon-star-on',
+  },
+  // 题库
+  {
+    module: 'problem',
+    path: '/problem/home',
+    title: '问题管理',
+    code: 'problemHome',
+    parentCode: 'paperBank',
+    icon: 'el-icon-star-on',
+  },
+  // 答题
+  {
+    module: 'paper',
+    path: '/paper/home',
+    title: '答题管理',
+    code: 'paperHome',
+    parentCode: 'paperBank',
+    icon: 'el-icon-star-on',
+  },
+  // 文件管理
+  {
+    module: 'files',
+    path: '/files/home',
+    title: '文件管理',
+    code: 'filesHome',
+    parentCode: null,
+    icon: 'el-icon-star-on',
+  },
+  // 留言评论
+  {
+    module: 'media',
+    path: '',
+    title: '留言评论',
+    code: 'media',
+    parentCode: null,
+    icon: 'el-icon-star-on',
+  },
+  // 评论管理
+  {
+    module: 'discuss',
+    path: '/discuss/home',
+    title: '评论管理',
+    code: 'discussHome',
+    parentCode: 'media',
+    icon: 'el-icon-star-on',
+  },
+  // 留言管理
+  {
+    module: 'leave',
+    path: '/leave/home',
+    title: '留言管理',
+    code: 'leaveHome',
+    parentCode: 'media',
+    icon: 'el-icon-star-on',
+  },
+  // 积分管理
+  {
+    module: 'integral',
+    path: '',
+    title: '积分管理',
+    code: 'integral',
+    parentCode: null,
+    icon: 'el-icon-star-on',
+  },
+  // 积分管理
+  {
+    module: 'integral',
+    path: '/integral/home',
+    title: '积分管理',
+    code: 'integralHome',
+    parentCode: 'integral',
+    icon: 'el-icon-star-on',
+  },
+  // 积分日志
+  {
+    module: 'integralLog',
+    path: '/integralLog/home',
+    title: '积分日志',
+    code: 'integralloglHome',
+    parentCode: 'integral',
+    icon: 'el-icon-star-on',
+  },
+];
+module.exports.data = data;
